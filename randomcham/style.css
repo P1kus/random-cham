@@ -1,0 +1,77 @@
+body {
+    margin:0;
+    padding:0;
+    background: linear-gradient(-45deg, #ff0000, #0088ff, #ff0015, #00aaff);
+    background-size: 400% 400%;
+    height: 100vh;
+    animation: Cham-Gradient 12s ease-in-out infinite;
+    font-family:'Open Sans', sans-serif;
+    font-weight:bold;
+    font-size:1.5em;
+}
+
+header {
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content:center;
+    background-color: rgba(0, 0, 0, 0.351);
+}
+
+header > img {
+    max-width: 190px;
+    max-height: 110px;
+    transform: rotate(15deg);
+}
+
+header > h1 {
+    color:#fff;
+    text-shadow: 2px 2px 2px black;
+}
+
+h1:hover {
+    animation: Cham-Spin 1 2 1s infinite; 
+}
+
+nav {
+    display:flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+ul {
+    display:flex;
+    gap: 5%;
+    list-style: none;
+}
+a {
+    color:#000;
+    text-decoration: none;
+    outline:none;
+}
+
+.Random-Cham {
+    display:flex;
+    justify-content: center;
+    padding-top: 25%;
+}
+
+
+@keyframes Cham-Gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (max-width: 400px)
+{
+    header > h1, header > img {
+        flex:100%;
+    }
+}
